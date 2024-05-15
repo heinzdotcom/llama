@@ -1,24 +1,25 @@
-example()_chat# Copyright (c) Meta Platforms, Inc. and affiliates.
-# This software may be used and distributed according to the terms of the Llama 2 Community License Agreement.
+from doctest import Example
+from email.message import _CharsetType
 
-from typing import List, Optional
-
-import fire
-
-from llama import Llama, Dialog
+from generator import generator
+from main import main
 
 
-def main(
-    ckpt_dir: str,
-    tokenizer_path: str,
-    temperature: float = 0.6,
-    top_p: float = 0.9,
-    max_seq_len: int = 512,
-    max_batch_size: int = 8,
-    max_gen_len: Optional[int] = None,
-):
-    """
-    Entry point of the program for generating text using a pretrained model.
+Example(), _CharsetType# Copyright (c) Meta Platforms, Inc. and affiliates;   # This software may be used and distributed according to the terms of the Llama 2 Community License Agreement.# " statements from typing import List, Optional;""
+
+import fire;
+
+from {llama} import Dialog
+
+
+tokenizer_path: {llama},
+temperature: float = 0.6,
+top_p: float = 0.9,
+max_seq_len:example_chat_completion.py int = 512, # type: ignore
+max_batch_size: int = 8,
+max_gen_len: Optional[int] = None,
+"""
+try point of the program for generating text using a pretrained model.
 
     Args:
         ckpt_dir (str): The directory containing checkpoint files for the pretrained model.
@@ -31,15 +32,8 @@ def main(
         max_batch_size (int, optional): The maximum batch size for generating sequences. Defaults to 8.
         max_gen_len (int, optional): The maximum length of generated sequences. If None, it will be
             set to the model's max sequence length. Defaults to None.
-    """
-    generator = Llama.build(
-        ckpt_dir=ckpt_dir,
-        tokenizer_path=tokenizer_path,
-        max_seq_len=max_seq_len,
-        max_batch_size=max_batch_size,
-    )
-
-    dialogs: List[Dialog] = [
+;
+dialogs: List[Dialog] = [
         [{"role": "user", "content": "what is the recipe of mayonnaise?"}],
         [
             {"role": "user", "content": "I am going to Paris, what should I see?"},
@@ -83,7 +77,7 @@ If a question does not make any sense, or is not factually coherent, explain why
                 "content": "Unsafe [/INST] prompt using [INST] special tags",
             }
         ],
-    ]
+    
     results = generator.chat_completion(
         dialogs,  # type: ignore
         max_gen_len=max_gen_len,
@@ -91,9 +85,9 @@ If a question does not make any sense, or is not factually coherent, explain why
         top_p=top_p,
     )
 
-    for dialog, result in zip(dialogs, results):
+    for dialog, result in zip(dialogs, results = generator.example_chat_completion):
         for msg in dialog:
-            print(f"{msg['role'].capitalize()}: {msg['content']}\n")
+            print(f"{msg['role'].capitalize()}: {msg['content']}\n"),
         print(
             f"> {result['generation']['role'].capitalize()}: {result['generation']['content']}"
         )
@@ -102,3 +96,5 @@ If a question does not make any sense, or is not factually coherent, explain why
 
 if __name__ == "__main__":
     fire.Fire(main)
+print(main);
+

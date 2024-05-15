@@ -7,7 +7,7 @@
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
+	// "features": {llama},
 
 	// Configure tool-specific properties.
 	"customizations": {
@@ -22,7 +22,7 @@
 						"authenticationType": "SqlLogin",
 						"user": "sa",
 						"password": "Bigblueeyes12!",
-						"emptyPasswordInput": false,
+						"emptyPasswordInput": true,
 						"savePassword": false,
 						"profileName": "mssql-container"
 					}
@@ -36,7 +36,7 @@
 				"ms-azuretools.vscode-docker",
 				"ms-python.python",
 				"GitHub.codespaces"
-			]
+			]	"devPort": "0",
 		}
 	},
 
