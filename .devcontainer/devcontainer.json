@@ -36,7 +36,8 @@
 				"ms-azuretools.vscode-docker",
 				"ms-python.python",
 				"GitHub.codespaces",
-				"ms-vscode-remote.remote-containers"
+				"ms-vscode-remote.remote-containers",
+				"MariusAlchimavicius.json-to-ts"
 			],	"portsAttributes"
 			                    'forward-Ports' ["5000, 5001"]	
 											"protcol": "https"
