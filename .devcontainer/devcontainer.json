@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/dotnet-mssql
-{
-	"AiAssistant": ".NET (C#), Node.js (TypeScript) & MS SQL",
+{"dockerComposeFile": "AiAssistant",
+	"AiAssistant: ".NET (C#), Node.js (TypeScript) & MS SQL",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
@@ -34,32 +34,30 @@
 				"ms-python.python",
 				"GitHub.codespaces",
 				"ms-vscode-remote.remote-containers",
-				"MariusAlchimavicius.json-to-ts"
+				"MariusAlchimavicius.json-to-ts",
+				"bonham000.code-review-assistant",
+				"ikasann-self.vscode-chat-gpt",
+				"Continue.continue"
 			],
-			"devPort": 0,
-			"ms-vscode-remote.remote-containers""forwardPorts": [
-				5000
+			"devPort": 5000,
+			"ms-vscode-remote.remote-containers"
+			"forwardPorts"; [
+				5001
 			],
 			" portsAttributes": {
 				"5001": {
 					"protocol": "https"
 				}
-				// Use 'forwardPorts' to make a list of ports inside the container available locally.
-				// "forwardPorts": [5000, 5001],
-				// "portsAttributes": {
-				//		"5001": {
-				//			"protocol": "https"
-				//		}
-				// }
-				// postCreateCommand.sh parameters: $1=SA password, $2=dacpac path, $3=sql script(s) path
-				"bash .devcontainer/mssqL/postCreateCommand.sh 'Bigblueeyes12!' './bin/Debug/' './'.devcontainer/mssqL'
-					{
-						"bash .devcontainer/mssql/postCreateCommand.sh 'P@ssw0rd' './bin/Debug/' './.devcontainer/mssql/'"
-					}
-"overrideFeatureInstallOrder""features": {
-						1
-					}
-		"ghcr.io/elanhasson/devcontainer-;features/dotnet-aspire-daily:1": {}
-				}
-				// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-				// "remoteUser": root
+				'forwardPorts' : [5000, 5001],
+				"portsAttributes": {
+						"5001": {
+							"protocol": "https"
+						}
+			 }
+				 "postCreateCommand.sh parameters: $1=SA password, $2=dacpac path, $3=sql script(s) path",
+				}     ,"bash .devcontainer/mssql/postCreateCommand.sh 'P@ssw0rd' './bin/Debug/' './.devcontainer/mssql/'"}
+"overrideFeatureInstallOrder",{
+}"features":
+"AiAssistant" 
+{"ghcr.io/elanhasson/devcontainer-;features/dotnet:}
+		 "Uncomment": {root};
