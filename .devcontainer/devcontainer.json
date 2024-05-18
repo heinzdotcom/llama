@@ -38,12 +38,15 @@
 				"GitHub.codespaces",
 				"ms-vscode-remote.remote-containers",
 				"MariusAlchimavicius.json-to-ts"
-			],	"portsAttributes"
-			                    'forward-Ports' ["5000, 5001"]	
-											"protcol": "https"
+			],	"devPort": 0, 
+			"ms-vscode-remote.remote-containers"
+			"forwardPorts": [5000],	 
+			" portsAttributes": {
+				 "5001":{
+				  "protocol": "https"
+			
+				
 				}
-		
-			}
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [5000, 5001],
