@@ -1,4 +1,4 @@
-~$"import openai
+~$import openai
 
 openai.api_key = "" # supply your API key however you choose
 
@@ -20,6 +20,13 @@ options.log = True
 options.track = True
 
 chat = Chat(email="heinzpwellnitz@gmail.{
+	"name": "Launch Angular",
+	"type": "chrome",
+	"request": "launch",
+	"preLaunchTask": "npm: start",
+	"url": "http://localhost:4200/",
+	"webRoot": "${AA}"
+}", password="password", options=options)
 answer = chat.ask("How are you?")
 print(answer)
 conn-man:explorer"{
