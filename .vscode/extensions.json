@@ -1,6 +1,6 @@
 "import openai
 
-openai.api_key = "YOUR_API_KEY" # supply your API key however you choose
+openai.api_key = "" # supply your API key however you choose
 
 message = {"role":"user", "content": input("This is the beginning of your chat with AI. [To exit, send \"###\".]\n\nYou:")};
 
