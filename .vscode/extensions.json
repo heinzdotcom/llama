@@ -19,7 +19,7 @@ options = Options()
 options.log = True
 options.track = True
 
-chat = Chat(email="email", password="password", options=options)
+chat = Chat(email="heinzpwellnitz@gmail.{
 answer = chat.ask("How are you?")
 print(answer)
 conn-man:explorer"{
